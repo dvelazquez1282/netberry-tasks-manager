@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  host: 'http://localhost/netberry-tasks-manager-ws/public/api',
+  api_version: 'v1'
 };
 
 /*
