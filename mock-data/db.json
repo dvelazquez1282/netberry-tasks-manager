@@ -1,0 +1,57 @@
+{    
+    "login": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+    },
+    "logout": {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+    },
+    "users": [
+        {
+            "id": 1,
+            "email": "user1@email.com",
+            "name": "John",
+            "lastname": "Doe"
+        }
+    ],
+    "types": [
+        {
+            "id": 1,
+            "title": "Job"
+        },
+        {
+            "id": 2,
+            "title": "Housework"
+        },
+        {
+            "id": 3,
+            "title": "Others"
+        }
+    ],
+    "tasks": [
+        {
+            "id": 1,
+            "title": "Prepare the client report",
+            "description": "Prepare the report of the houres dedicated to the project this month",
+            "deadline" : "2022-10-31",
+            "createdAt": "2022-10-21 00:00:00",
+            "typeId": 1
+        },
+        {
+            "id": 2,
+            "title": "Deploy the new release of the project",
+            "description": "Build the new release of the project and deploy it in the client server. After of that send email to the client for advise that the new release is in prod",
+            "deadline" : "2022-10-31",
+            "createdAt": "2022-10-21 00:00:00",
+            "typeId": 1
+        }
+        ,
+        {
+            "id": 3,
+            "title": "Call the locksmith",
+            "description": "Call the locksmith for change the lock of the main door",
+            "deadline" : "2022-10-31",
+            "createdAt": "2022-10-21 00:00:00",
+            "typeId": 2
+        }
+    ]
+}
