@@ -29,7 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Roadmap
 [X] Create model classes for user and login
-[] Implement a server for the api request (route helper, flow with possibility to use mock data or api request, etc..)
+[X] Implement api-routes helper for build the routes for the api requests
+[] Install json-server and preparate the db.json file for the mock data
 [] Create Login page
 [] Interceptor for send token in the api request
 [] Implement guard for check if the user is authenticated when we refresh de app. If it's not authenticated then, we redirect the system to login form page.
