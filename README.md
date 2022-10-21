@@ -30,9 +30,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Roadmap
 [X] Create model classes for user and login
 [] Implement a server for the api request (route helper, flow with possibility to use mock data or api request, etc..)
-[] Login page
+[] Create Login page
 [] Interceptor for send token in the api request
-[] Guard for check if the user is authenticated when we refresh de app. If it's authenticated (there is a token in localstorage) we use ii for do a api request in order to get the user info. If it's not uathenticated then, we redirect the system to login form page.
+[] Implement guard for check if the user is authenticated when we refresh de app. If it's not authenticated then, we redirect the system to login form page.
+[] Implement resolver in order to do a api request for get a user data if the user is authenticated (there is a token in localstorage) in the app refresh we use ii for do a api 
 [] Create model classes for task
 [] Build the task manager page
 [] Redirect after the login to the task manager page
