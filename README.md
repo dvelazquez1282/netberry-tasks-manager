@@ -30,12 +30,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Roadmap
 [X] Create model classes for user and login
 [X] Implement api-routes helper for build the routes for the api requests
-[] Install json-server and preparate the db.json file for the mock data
+[X] Install json-server and preparate the db.json file for the mock data
+[X] Encapsulate the text input in components
 [] Create Login page
-[] Interceptor for send token in the api request
 [] Implement guard for check if the user is authenticated when we refresh de app. If it's not authenticated then, we redirect the system to login form page.
+[] Interceptor for send token in the api request
 [] Implement resolver in order to do a api request for get a user data if the user is authenticated (there is a token in localstorage) in the app refresh we use ii for do a api 
 [] Create model classes for task
+[] Encapsulate the select input in components
 [] Build the task manager page
 [] Redirect after the login to the task manager page
 [] Redirect after refresh (if the user is authenitcated) to the task manager page
@@ -44,7 +46,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [] Implement the edition action (with a modal)
 [] Implement the delete action (with a confirmation modal)
 [] Implement the delete bulk action (with a confirmation modal)
-
+[] Specify the project run steps 
 
 ## Topics to analize
 - To use ngxs plugin in order to work with a state management pattern

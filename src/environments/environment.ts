@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   host: 'http://localhost/netberry-tasks-manager-ws/public/api',
-  api_version: 'v1'
+  api_version: 'v1',
+  debug: true,
 };
 
 /*
