@@ -16,7 +16,12 @@ export class AuthService {
   private currentUser: User;
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    let token = localStorage.getItem('token');
+    if(token) {
+      this.setToken(token);
+    }    
+  }
 
   public getCurrentUser(): User {
     return this.currentUser;
