@@ -41,7 +41,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [X] Build the task manager page
 [] Redirect after the login to the task manager page
 [] Redirect after refresh (if the user is authenitcated) to the task manager page
-[] Implement the tasks table in the task manager page
+[X] Implement the tasks table in the task manager page
 [] Implement the new action (with a modal)
 [] Implement the edition action (with a modal)
 [] Implement the delete action (with a confirmation modal)
