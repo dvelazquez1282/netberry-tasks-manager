@@ -34,8 +34,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [X] Encapsulate the text input in components
 [X] Create Login page
 [X] Implement guard for check if the user is authenticated when we refresh de app. If it's not authenticated then, we redirect the system to login form page.
-[] Interceptor for send token in the api request
-[] Implement resolver in order to do a api request for get a user data if the user is authenticated (there is a token in localstorage) in the app refresh we use ii for do a api 
+[X] Interceptor for send token in the api request
+[X] Get a user data if the user is authenticated (there is a token in localstorage) in the app refresh we use ii for do a api 
 [] Create model classes for task
 [] Encapsulate the select input in components
 [] Build the task manager page
