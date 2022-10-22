@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter, forwardRef } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, OnInit, Input, Output, EventEmitter, forwardRef, ViewChild } from '@angular/core';
+import { ControlValueAccessor, NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { TextInputComponentConfig } from 'src/app/models/text-component-config.model';
 import { environment } from 'src/environments/environment';
 
@@ -16,6 +16,8 @@ import { environment } from 'src/environments/environment';
   ]
 })
 export class TextInputComponent implements OnInit, ControlValueAccessor {
+
+  @ViewChild('input') input :any;
 
   public debug: boolean;
 
@@ -55,6 +57,10 @@ export class TextInputComponent implements OnInit, ControlValueAccessor {
   }
   setDisabledState?(isDisabled: boolean): void {
     throw new Error('Method not implemented.');
+  }
+
+  valid(): boolean {
+    return this.input.control.valid;
   }
 
   ngOnInit(): void {
