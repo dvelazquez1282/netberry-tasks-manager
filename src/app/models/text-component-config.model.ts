@@ -7,7 +7,7 @@ export class TextInputComponentConfig {
 
 
 export enum TextInputComponentConfigType {
-    text, 
-    email, 
-    password,     
+    text = 'text', 
+    email = 'email', 
+    password = 'password',     
   }
