@@ -37,7 +37,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [X] Interceptor for send token in the api request
 [X] Get a user data if the user is authenticated (there is a token in localstorage) in the app refresh we use ii for do a api 
 [X] Create model classes for task and task type
-[] Encapsulate the select input in components
+[X] Encapsulate the select input in components
+[X] Encapsulate the text area input in components
 [X] Build the task manager page
 [] Redirect after the login to the task manager page
 [] Redirect after refresh (if the user is authenitcated) to the task manager page
@@ -45,7 +46,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [] Implement the new action (with a modal)
 [] Implement the edition action (with a modal)
 [] Implement the delete action (with a confirmation modal)
-[] Implement the delete bulk action (with a confirmation modal)
 [] Specify the project run steps 
 
 ## Topics to analize
@@ -59,3 +59,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Manage the token expiration
 - Create or use a generic component for tables
 - Implement Pagination, filters, ordering (we could create a abstract service for all tables)
+- Bulk action: for example delete (with a confirmation modal) 
