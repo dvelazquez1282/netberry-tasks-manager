@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
 import { Subscription } from 'rxjs';
 import { User } from 'src/app/models/user.model';
 import { LoginResponse } from 'src/app/interfaces/login-response';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -46,7 +47,7 @@ export class LoginFormComponent implements OnInit, OnDestroy {
   public error: string | null;
   
 
-  constructor(public authService: AuthService) { 
+  constructor(public authService: AuthService, public router: Router) { 
     
   }
 
@@ -64,8 +65,9 @@ export class LoginFormComponent implements OnInit, OnDestroy {
         .subscribe({
           next: (res: LoginResponse)=> {
             this.error = null;
-            this.authService.setCurrentUser(res.user)
-            this.authService.setToken(res.accessToken)
+            this.authService.setCurrentUser(res.user);
+            this.authService.setToken(res.accessToken);
+            this.router.navigate(['panel']);
           },
           error: (error) => {
             this.error = error;            
