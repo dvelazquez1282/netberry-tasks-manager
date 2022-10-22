@@ -14,10 +14,22 @@ export class ApiRoutes {
 
     private static TASK_PREFIX = '/tasks'
 
+    private static TYPE_PREFIX = '/types'
+
+
+    
+    /**
+     *   USER ROUTES 
+     */
 
     public static getUserMeRoute() {
         return ApiRoutes.getAPIHostRoute() + ApiRoutes.USERS_PREFIX + ApiRoutes.USER_ME_ROUTE;
     }
+
+    
+    /**
+     *   AUTH ROUTES 
+     */
 
     public static getAuthLoginRoute() {
         return ApiRoutes.getAPIHostRoute() + ApiRoutes.AUTH_PREFIX + ApiRoutes.AUTH_LOGIN_ROUTE;
@@ -27,6 +39,11 @@ export class ApiRoutes {
         return ApiRoutes.getAPIHostRoute() + ApiRoutes.AUTH_PREFIX + ApiRoutes.AUTH_LOGOUT_ROUTE;
     }
     
+    
+    /**
+     *   TASK ROUTES 
+     */
+
     public static getListTaskRoute() {
         return ApiRoutes.getAPIHostRoute() + ApiRoutes.TASK_PREFIX;
     }
@@ -41,6 +58,14 @@ export class ApiRoutes {
 
     public static getDeleteTaskRoute(taskId: number) {
         return ApiRoutes.getAPIHostRoute() + ApiRoutes.TASK_PREFIX + '/' + taskId.toString();
+    }
+
+    /**
+     *   TYPE ROUTES 
+     */
+    
+    public static getListTypeRoute() {
+        return ApiRoutes.getAPIHostRoute() + ApiRoutes.TYPE_PREFIX;
     }
 
     private static getAPIHostRoute(): string {
