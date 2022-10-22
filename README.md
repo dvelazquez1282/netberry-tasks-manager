@@ -36,7 +36,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [X] Implement guard for check if the user is authenticated when we refresh de app. If it's not authenticated then, we redirect the system to login form page.
 [X] Interceptor for send token in the api request
 [X] Get a user data if the user is authenticated (there is a token in localstorage) in the app refresh we use ii for do a api 
-[] Create model classes for task
+[X] Create model classes for task and task type
 [] Encapsulate the select input in components
 [] Build the task manager page
 [] Redirect after the login to the task manager page
