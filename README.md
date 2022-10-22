@@ -41,7 +41,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [] Build the task manager page
 [] Redirect after the login to the task manager page
 [] Redirect after refresh (if the user is authenitcated) to the task manager page
-[] Implement the tasks table in the task manager page (with pagination, filter by type, ordering by date of the tasks)
+[] Implement the tasks table in the task manager page
 [] Implement the new action (with a modal)
 [] Implement the edition action (with a modal)
 [] Implement the delete action (with a confirmation modal)
@@ -57,3 +57,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Implemente a privilege services (methods by profile and by specific privilege)
 - Add noty plugin for message notifications (success operation and erros)
 - Manage the token expiration
+- Create or use a generic component for tables
+- Implement Pagination, filters, ordering (we could create a abstract service for all tables)
