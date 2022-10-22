@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ViewChild } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -29,7 +29,7 @@ export class TaskService {
   }
   public update(task: Task): Observable<any> {
     let url = ApiRoutes.getUpdateTaskRoute(task.id);
-    return this.http.post(url, task)
+    return this.http.put(url, task)
       .pipe(
         catchError(this.handleError)
       );
@@ -41,7 +41,6 @@ export class TaskService {
         catchError(this.handleError)
       );
   }
-
 
   private handleError(error: HttpErrorResponse) {    
     // Return an observable with a user-facing error message.
