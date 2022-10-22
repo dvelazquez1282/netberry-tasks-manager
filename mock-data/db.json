@@ -1,17 +1,12 @@
-{    
-    "login": {
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-    },
-    "logout": {
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
-    },
+{        
     "users": [
         {
             "id": 1,
             "email": "user1@email.com",
             "name": "John",
-            "lastname": "Doe"
-        }
+            "lastname": "Doe",
+            "password": "$2a$12$z2a/1ZX6cu8xlIjPiGS2ye6Dutg8VlnJedFBXyspRTdFQJfgP5t1i"
+        }        
     ],
     "types": [
         {
