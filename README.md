@@ -32,8 +32,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [X] Implement api-routes helper for build the routes for the api requests
 [X] Install json-server and preparate the db.json file for the mock data
 [X] Encapsulate the text input in components
-[] Create Login page
-[] Implement guard for check if the user is authenticated when we refresh de app. If it's not authenticated then, we redirect the system to login form page.
+[X] Create Login page
+[X] Implement guard for check if the user is authenticated when we refresh de app. If it's not authenticated then, we redirect the system to login form page.
 [] Interceptor for send token in the api request
 [] Implement resolver in order to do a api request for get a user data if the user is authenticated (there is a token in localstorage) in the app refresh we use ii for do a api 
 [] Create model classes for task
@@ -56,3 +56,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Create a abstract class for the forms (with new, edit, save and update methods)
 - Implemente a privilege services (methods by profile and by specific privilege)
 - Add noty plugin for message notifications (success operation and erros)
+- Manage the token expiration
