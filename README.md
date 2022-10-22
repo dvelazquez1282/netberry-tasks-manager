@@ -38,7 +38,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [X] Get a user data if the user is authenticated (there is a token in localstorage) in the app refresh we use ii for do a api 
 [X] Create model classes for task and task type
 [] Encapsulate the select input in components
-[] Build the task manager page
+[X] Build the task manager page
 [] Redirect after the login to the task manager page
 [] Redirect after refresh (if the user is authenitcated) to the task manager page
 [] Implement the tasks table in the task manager page
