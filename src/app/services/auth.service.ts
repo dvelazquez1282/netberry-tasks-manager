@@ -66,7 +66,7 @@ export class AuthService {
       );
       observable.subscribe({
         next: (res: UserResponse)=> {
-            this.setCurrentUser(res);
+            this.setCurrentUser(<User> res);
         },
         error: (error) => {
             this.router.navigate(['login'])
