@@ -28,19 +28,25 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Roadmap
-[] Implement a server for the api request (route helper, flow with possibility to use mock data or api request, etc..)
-[] Login page
-[] Interceptor for send token in the api request
-[] Guard for check if the user is authenticated when we refresh de app. If it's authenticated (there is a token in localstorage) we use ii for do a api request in order to get the user info. If it's not uathenticated then, we redirect the system to login form page.
+[X] Create model classes for user and login
+[X] Implement api-routes helper for build the routes for the api requests
+[X] Install json-server and preparate the db.json file for the mock data
+[X] Encapsulate the text input in components
+[X] Create Login page
+[X] Implement guard for check if the user is authenticated when we refresh de app. If it's not authenticated then, we redirect the system to login form page.
+[X] Interceptor for send token in the api request
+[X] Get a user data if the user is authenticated (there is a token in localstorage) in the app refresh we use ii for do a api 
+[X] Create model classes for task and task type
+[] Encapsulate the select input in components
 [] Build the task manager page
 [] Redirect after the login to the task manager page
 [] Redirect after refresh (if the user is authenitcated) to the task manager page
-[] Implement the tasks table in the task manager page (with pagination, filter by type, ordering by date of the tasks)
+[] Implement the tasks table in the task manager page
 [] Implement the new action (with a modal)
 [] Implement the edition action (with a modal)
 [] Implement the delete action (with a confirmation modal)
 [] Implement the delete bulk action (with a confirmation modal)
-
+[] Specify the project run steps 
 
 ## Topics to analize
 - To use ngxs plugin in order to work with a state management pattern
@@ -49,3 +55,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Create a template component for the modals
 - Create a abstract class for the forms (with new, edit, save and update methods)
 - Implemente a privilege services (methods by profile and by specific privilege)
+- Add noty plugin for message notifications (success operation and erros)
+- Manage the token expiration
+- Create or use a generic component for tables
+- Implement Pagination, filters, ordering (we could create a abstract service for all tables)

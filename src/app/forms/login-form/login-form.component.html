@@ -1,0 +1,15 @@
+<div class="form mt-3">
+    <form #form="ngForm">
+        <app-text-input #email [config]="formConfig.email" [(ngModel)]="login.email" name="email"></app-text-input>
+        <app-text-input #password [config]="formConfig.password" [(ngModel)]="login.password" name="password"></app-text-input>        
+        <div class="mb-3">
+          <code *ngIf="login && debug">
+            {{
+              login | json
+            }}
+          </code>                
+        </div>                    
+        <ngb-alert *ngIf="error" [type]="'danger'" [dismissible]="false">{{ error }}</ngb-alert>
+        <button [disabled]="!isValidForm()" (click)="submit()" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
