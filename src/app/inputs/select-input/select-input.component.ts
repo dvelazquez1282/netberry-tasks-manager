@@ -1,6 +1,6 @@
 import { Component, OnInit, forwardRef, ViewChild, Input } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { SelectInputComponentConfig } from 'src/app/models/select-component-config.model copy';
+import { SelectInputComponentConfig } from 'src/app/models/select-component-config.model';
 import { environment } from 'src/environments/environment';
 
 @Component({
