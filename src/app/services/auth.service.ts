@@ -6,36 +6,43 @@ import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ApiRoutes } from '../helpers/api-routes.helper';
 import { LoginResponse } from '../interfaces/login-response';
+import { Router } from '@angular/router';
+import { UserResponse } from '../interfaces/user-response';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private token: string;
-  private currentUser: User;
+  private token: string | null;
+  private currentUser: User | null;
 
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     let token = localStorage.getItem('token');
     if(token) {
       this.setToken(token);
+      this.me();
     }    
   }
 
-  public getCurrentUser(): User {
+  public getCurrentUser(): User | null {
     return this.currentUser;
   }
-  public setCurrentUser(user: User) {
+  public setCurrentUser(user: User | null) {
     this.currentUser = user;
   }
 
   public getToken(): string | null {
     return this.token;
   }
-  public setToken(token: string) {
-    localStorage.setItem('token', token);
+  public setToken(token: string | null) {    
     this.token = token;
+    if(token) {
+      localStorage.setItem('token', token);
+    } else {
+      localStorage.removeItem('token');
+    }    
   }
 
   public login(login: Login): Observable<any> {
@@ -46,12 +53,25 @@ export class AuthService {
       );
   }
 
-  public me(): Observable<Object> {
+  public logout() {
+    this.setCurrentUser(null);
+    this.setToken(null);
+  }
+
+  public me() {
     let url = ApiRoutes.getUserMeRoute();
-    return this.http.get(url)
+    let observable: Observable<any> = this.http.get(url)
       .pipe(
         catchError(this.handleError)
       );
+      observable.subscribe({
+        next: (res: UserResponse)=> {
+            this.setCurrentUser(res);
+        },
+        error: (error) => {
+            this.router.navigate(['login'])
+        }
+      });
   }
 
 
