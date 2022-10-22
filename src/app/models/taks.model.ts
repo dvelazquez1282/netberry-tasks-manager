@@ -1,7 +1,7 @@
 import { Type } from "./type.model";
 
 export class Task {
-    id: string;
+    id: number;
     title: string;
     description: string;
     deadline: string;
