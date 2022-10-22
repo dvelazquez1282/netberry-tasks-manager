@@ -1,0 +1,16 @@
+<div class="form mt-3">
+    <form #form="ngForm" *ngIf="task">
+        <app-text-input #title [config]="formConfig.title" [(ngModel)]="task.title" name="title"></app-text-input>
+        <app-text-area-input #description [config]="formConfig.description" [(ngModel)]="task.description" name="password"></app-text-area-input>        
+        <app-text-input #deadline [config]="formConfig.deadline" [(ngModel)]="task.deadline" name="deadline"></app-text-input>
+        <app-select-input #typeId [config]="formConfig.typeId" [(ngModel)]="task.typeId" name="typeId"></app-select-input>
+        <div class="mb-3">
+          <code *ngIf="task && debug">
+            {{
+              task | json
+            }}
+          </code>                
+        </div>                    
+        <ngb-alert *ngIf="error" [type]="'danger'" [dismissible]="false">{{ error }}</ngb-alert>        
+    </form>
+</div>

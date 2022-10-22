@@ -1,1 +1,21 @@
-<app-task-table></app-task-table>
+<app-task-table (create)="onCreate()" (edit)="onEdit($event)"></app-task-table>
+
+<!-- TODO - To encapsule in a component -->
+<div class="modal" tabindex="-1" id="task-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{mode == 'create' ? 'Create a new task' : 'Edit the task'}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-task-form (success)="onSuccess()"></app-task-form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button *ngIf="mode == 'create'" (click)="store()" type="button" class="btn btn-primary">Create task</button>
+          <button *ngIf="mode == 'edit'" (click)="update()" type="button" class="btn btn-primary">Update task</button>
+        </div>
+      </div>
+    </div>
+  </div>

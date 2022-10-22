@@ -11,16 +11,28 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TaskTableComponent } from './tables/task-table/task-table.component';
+import { TaskFormComponent } from './forms/task-form/task-form.component';
+import { TasksComponent } from './pages/tasks/tasks.component';
+import { TaskService } from './services/task.service';
+import { TextAreaInputComponent } from './inputs/text-area-input/text-area-input.component';
+import { SelectInputComponent } from './inputs/select-input/select-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     // Pages
     LoginComponent,
+    TasksComponent,
     // Forms
     LoginFormComponent,
-    // Inputs
+    TaskFormComponent,
+    // Inputs    
     TextInputComponent,
+    // Tables
+    TaskTableComponent,
+    TextAreaInputComponent,
+    SelectInputComponent,    
   ],
   imports: [
     BrowserModule,
@@ -31,6 +43,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   providers: [
     AuthService,
+    TaskService,
     {
       provide : HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,

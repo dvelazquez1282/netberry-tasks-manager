@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { TaskService } from 'src/app/services/task.service';
 import { Subscription } from 'rxjs';
 import { Task } from 'src/app/models/taks.model';
@@ -14,7 +14,11 @@ export class TaskTableComponent implements OnInit, OnDestroy {
 
   public subscription: Subscription;
 
+  @Output() create = new EventEmitter<any>();
+  @Output() edit = new EventEmitter<Task>();
+
   constructor(public taskService: TaskService) { }
+  
 
   ngOnInit(): void {
     this.list();
@@ -31,6 +35,13 @@ export class TaskTableComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
+  }
+
+  onCreate() {
+    this.create.emit();
+  }
+  onEdit(task: Task) {
+    this.edit.emit(task);
   }
 
 }

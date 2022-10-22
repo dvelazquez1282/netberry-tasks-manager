@@ -1,5 +1,6 @@
 
 <div *ngIf="tasks">    
+    <button (click)="onCreate()" type="button" class="btn btn-primary mb-3 mt-3">Create</button>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -18,7 +19,10 @@
                 </td>
                 <td>{{ task.deadline | date: 'dd/MM/yyyy' }}</td>
                 <td>{{ task.createdAt | date: 'dd/MM/yyyy HH:mm' }}</td>
-                <td></td>
+                <td>
+                    <a href="javascript:;" (click)="onEdit(task)"><i class="bi bi-pencil"></i></a>
+                    <a href="javascript:;"><i class="bi bi-trash"></i></a>
+                </td>
             </tr>
         </tbody>
     </table>
