@@ -59,6 +59,7 @@ export class TasksComponent implements OnInit, OnDestroy {
           this.taskTableComponent.list();
           this.taskIdToDelete = null;
           this.hideDeleteModal();
+          window.alert('Success operation'); // We could use a plugin for notifications (for example Noty.js)
         },
       });    
     }
@@ -67,6 +68,7 @@ export class TasksComponent implements OnInit, OnDestroy {
   onSuccess() {
     this.hideModal();
     this.taskTableComponent.list();
+    window.alert('Success operation'); // We could use a plugin for notifications (for example Noty.js)
   }
 
   private openModal() {    
