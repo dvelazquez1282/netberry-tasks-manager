@@ -16,6 +16,7 @@ export class TaskTableComponent implements OnInit, OnDestroy {
 
   @Output() create = new EventEmitter<any>();
   @Output() edit = new EventEmitter<Task>();
+  @Output() delete = new EventEmitter<any>();
 
   constructor(public taskService: TaskService) { }
   
@@ -34,7 +35,9 @@ export class TaskTableComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    if(this.subscription) {
+      this.subscription.unsubscribe(); 
+    }    
   }
 
   onCreate() {
@@ -42,6 +45,9 @@ export class TaskTableComponent implements OnInit, OnDestroy {
   }
   onEdit(task: Task) {
     this.edit.emit(task);
+  }
+  onDelete(id: number) {
+    this.delete.emit(id);
   }
 
 }

@@ -21,7 +21,7 @@
                 <td>{{ task.createdAt | date: 'dd/MM/yyyy HH:mm' }}</td>
                 <td>
                     <a href="javascript:;" (click)="onEdit(task)"><i class="bi bi-pencil"></i></a>
-                    <a href="javascript:;"><i class="bi bi-trash"></i></a>
+                    <a href="javascript:;" (click)="onDelete(task.id)"><i class="bi bi-trash"></i></a>
                 </td>
             </tr>
         </tbody>

@@ -34,9 +34,9 @@ export class TaskService {
         catchError(this.handleError)
       );
   }
-  public delete(task: Task): Observable<any> {
-    let url = ApiRoutes.getDeleteTaskRoute(task.id);
-    return this.http.post(url, task)
+  public delete(id: number): Observable<any> {
+    let url = ApiRoutes.getDeleteTaskRoute(id);
+    return this.http.delete(url)
       .pipe(
         catchError(this.handleError)
       );
