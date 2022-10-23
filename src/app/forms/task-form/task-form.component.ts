@@ -137,7 +137,11 @@ export class TaskFormComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
-    this.typeSubscription.unsubscribe();
+    if(this.subscription) {
+      this.subscription.unsubscribe();
+    }    
+    if(this.typeSubscription) {
+      this.typeSubscription.unsubscribe();
+    }    
   }
 }
