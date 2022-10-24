@@ -1,0 +1,29 @@
+
+<div *ngIf="tasks">    
+    <button (click)="onCreate()" type="button" class="btn btn-primary mb-3 mt-3">Create</button>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Deadline</th>
+                <th scope="col">Created at</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let task of tasks; index as i">
+                <th scope="row">{{task.id}}</th>
+                <td>                    
+                    {{ task.title }}
+                </td>
+                <td>{{ task.deadline | date: 'dd/MM/yyyy' }}</td>
+                <td>{{ task.createdAt | date: 'dd/MM/yyyy HH:mm' }}</td>
+                <td>
+                    <a href="javascript:;" (click)="onEdit(task)"><i class="bi bi-pencil"></i></a>
+                    <a href="javascript:;" (click)="onDelete(task.id)"><i class="bi bi-trash"></i></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>    

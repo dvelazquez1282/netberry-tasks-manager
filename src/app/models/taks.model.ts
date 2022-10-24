@@ -6,5 +6,5 @@ export class Task {
     description: string;
     deadline: string;
     createdAt: string;
-    type: Type
+    typeId: number | null
 }

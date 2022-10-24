@@ -1,0 +1,22 @@
+<div class="mb-3">
+    <label for="{{config.id}}" class="form-label">{{config.label}}<span *ngIf="config.rules.required" class="text-danger"> *</span></label>
+    <textarea 
+        required="{{config.rules.required}}"
+        [(ngModel)]="value" 
+        #input="ngModel"
+        name="{{config.id}}"
+        class="form-control" 
+        id="{{config.id}}"></textarea>          
+</div>
+
+<ng-container *ngIf="input && (input.dirty || input.touched)">
+    <div *ngIf="input.errors?.['required']" class="text-danger mb-3">
+        {{config.label}} is required.
+    </div>
+</ng-container>
+
+<code *ngIf="value && debug">
+    {{
+        value | json
+    }}
+</code>
