@@ -47,7 +47,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [X] Implement the edition action (with a modal)
 [X] Implement the delete action (with a confirmation modal)
 [X] Success messages
-[] Specify the project run steps 
+[X] Specify the project run steps 
 
 ## Topics to analize
 - To use ngxs plugin in order to work with a state management pattern
@@ -61,3 +61,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Create or use a generic component for tables
 - Implement Pagination, filters, ordering (we could create a abstract service for all tables)
 - Bulk action: for example delete (with a confirmation modal) 
+
+
+## Intructions for run the project
+- npm i
+- npm install -g json-server
+- ng serve
+- json-server --watch mock-data/db.json --routes mock-data/routes.json -m ./node_modules/json-server-auth
+- In login page, use the next credentials. Email: user1@email.com Password:1234567890
